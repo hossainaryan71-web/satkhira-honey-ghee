@@ -17,6 +17,40 @@ header{position:sticky;top:0;z-index:50;background:#031711eF;border-bottom:1px s
 footer{background:#020f0b;color:#c8d5cf;padding:35px 0;text-align:center}.float{position:fixed;right:20px;bottom:20px;z-index:45;width:60px;height:60px;border-radius:50%;background:var(--wa);color:white;display:grid;place-items:center;box-shadow:0 8px 28px #0005}
 .overlay{position:fixed;inset:0;background:#0008;z-index:90;opacity:0;pointer-events:none;transition:.25s}.overlay.show{opacity:1;pointer-events:auto}.drawer{position:fixed;right:0;top:0;height:100%;width:min(440px,100%);background:#fff;z-index:100;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column}.drawer.show{transform:none}.cartHead{padding:22px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#eee;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer}.items{padding:12px 18px;overflow:auto;flex:1}.empty{text-align:center;color:#88948e;padding:70px 20px}.item{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:13px 0;border-bottom:1px solid #eee}.item img{width:72px;height:72px;border-radius:12px;object-fit:cover}.item h4{margin:0 0 5px}.item p{margin:0;color:#855816;font-weight:800}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{width:27px;height:27px;border:0;border-radius:7px;background:#edf1ee;cursor:pointer;font-weight:800}.remove{background:none;border:0;color:#b44;cursor:pointer}.cartFoot{padding:18px;border-top:1px solid #eee;background:#fafafa}.total{display:flex;justify-content:space-between;font:800 20px Poppins;margin-bottom:14px}.checkout{width:100%;background:linear-gradient(135deg,#e9c45e,#b7781b);color:#11261c}
 .modal{position:fixed;inset:0;z-index:120;background:#0009;display:none;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.box{width:min(580px,100%);max-height:92vh;overflow:auto;background:white;border-radius:22px;padding:25px}.box h2{margin-top:0}.field{margin:13px 0}.field label{display:block;font-weight:800;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;border:1px solid #dbe1dd;border-radius:10px;padding:13px;outline:none}.field textarea{min-height:90px}.formTotal{background:#f3f5f3;padding:13px;border-radius:10px;font-weight:800;margin:15px 0}.notice{font-size:12px;color:#748078}
+.pic,.body h3{cursor:pointer}
+.viewBtn{background:none;border:0;color:#a26d14;font-weight:800;font-size:12px;text-decoration:underline;cursor:pointer;padding:0;margin-top:2px}
+.detailBox{width:min(760px,100%);max-height:92vh;overflow:auto;background:white;border-radius:22px;padding:0}
+.detailTop{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.detailPic{height:100%;min-height:300px;background:#ddd;overflow:hidden}
+.detailPic img{width:100%;height:100%;object-fit:cover;display:block}
+.detailInfo{padding:28px}
+.detailInfo .tag{display:inline-block}
+.detailInfo h2{margin:8px 0 6px;font-size:26px}
+.stars{color:#e0a71c;font-size:15px;letter-spacing:1px}
+.ratingLine{display:flex;align-items:center;gap:8px;margin:6px 0 14px;font-size:13px;color:#718078}
+.ratingLine b{color:#37453e}
+.detailDesc{color:#63746b;font-size:14px;line-height:1.8;margin-bottom:18px}
+.variantLabel{font:800 11px Poppins;letter-spacing:1.5px;color:#a26d14;margin-bottom:8px;display:block}
+.variantWrap{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
+.variantPill{border:1.5px solid #dbe1dd;background:#fbfaf6;border-radius:11px;padding:10px 14px;cursor:pointer;text-align:center;transition:.2s;min-width:88px}
+.variantPill b{display:block;font-size:14px}
+.variantPill span{display:block;font-size:12px;color:#855816;font-weight:700;margin-top:2px}
+.variantPill.active{border-color:var(--gold);background:#fbf1d9;box-shadow:0 0 0 1px var(--gold) inset}
+.detailQtyRow{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.detailQty{display:flex;align-items:center;gap:14px;background:#f5f6f4;border-radius:12px;padding:7px 10px}
+.detailQty button{width:32px;height:32px;border:0;border-radius:8px;background:#fff;box-shadow:0 1px 4px #0002;cursor:pointer;font-weight:800;font-size:16px}
+.detailQty b{min-width:18px;text-align:center}
+.detailPrice{font:800 26px Poppins;color:#855816}
+.detailActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.reviewsWrap{padding:0 28px 28px}
+.reviewsHead{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #eee;padding-top:20px;margin-bottom:14px}
+.reviewsHead h3{margin:0;font-size:18px}
+.reviewCard{background:#f8f7f2;border-radius:14px;padding:15px 17px;margin-bottom:10px}
+.reviewCard .rTop{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.reviewCard .rName{font-weight:800;font-size:14px}
+.reviewCard .rDate{font-size:11px;color:#9aa39c}
+.reviewCard .rText{font-size:13px;color:#5c685f;line-height:1.7}
+@media(max-width:700px){.detailTop{grid-template-columns:1fr}.detailPic{min-height:220px}.detailActions{grid-template-columns:1fr}}
 @media(max-width:800px){.navlinks{display:none}.products,.orderGrid{grid-template-columns:1fr}.featureGrid{grid-template-columns:repeat(2,1fr);gap:18px}.hero{min-height:650px}.heroIn{padding:65px 0 100px}.pic{height:340px}}
 
 /* About, Quality, Service & Satkhira Heritage */
@@ -152,27 +186,101 @@ footer{background:#020f0b;color:#c8d5cf;padding:35px 0;text-align:center}.float{
 <a class="float" href="https://wa.me/8801965419892" target="_blank" aria-label="WhatsApp"><svg class="socialIcon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5C8.55 2.5 2.5 8.55 2.5 16c0 2.39.63 4.73 1.82 6.79L2.5 29.5l6.89-1.8A13.45 13.45 0 0016 29.5c7.45 0 13.5-6.05 13.5-13.5S23.45 2.5 16 2.5zm0 24.55a11.05 11.05 0 01-5.64-1.55l-.4-.24-4.09 1.07 1.1-3.98-.26-.41A11.05 11.05 0 014.95 16C4.95 9.9 9.9 4.95 16 4.95S27.05 9.9 27.05 16 22.1 27.05 16 27.05zm6.06-8.3c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-1.94-.97-3.21-1.73-4.48-3.91-.34-.58.34-.54.96-1.81.11-.23.06-.41-.03-.58-.08-.17-.74-1.77-1.02-2.42-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.56.08-.85.41-.3.33-1.11 1.08-1.11 2.62 0 1.54 1.12 3.03 1.28 3.24.16.21 2.2 3.36 5.32 4.72.74.32 1.32.51 1.77.65.75.24 1.44.2 1.98.12.6-.09 1.95-.8 2.22-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.38z"/></svg></a>
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
 <aside class="drawer" id="drawer"><div class="cartHead"><h2>🛒 আপনার Cart</h2><button class="close" onclick="closeCart()">×</button></div><div class="items" id="items"></div><div class="cartFoot"><div class="total"><span>মোট</span><span id="total">৳0</span></div><button class="btn checkout" onclick="checkout()">Checkout করুন</button></div></aside>
+<div class="modal" id="detailModal"><div class="detailBox"><div style="text-align:right;padding:14px 14px 0"><button class="close" onclick="closeDetail()">×</button></div><div id="detailContent"></div></div></div>
 <div class="modal" id="modal"><div class="box"><button class="close" style="float:right" onclick="closeCheckout()">×</button><h2>Checkout</h2><p>আপনার তথ্য দিন। এরপর সম্পূর্ণ অর্ডারটি WhatsApp-এ পাঠানো হবে।</p><div class="field"><label>আপনার নাম *</label><input id="name" placeholder="নাম লিখুন"></div><div class="field"><label>মোবাইল নম্বর *</label><input id="phone" placeholder="01XXXXXXXXX"></div><div class="field"><label>ঠিকানা *</label><textarea id="address" placeholder="সম্পূর্ণ ডেলিভারি ঠিকানা"></textarea></div><div class="field"><label>নোট (ঐচ্ছিক)</label><textarea id="note" placeholder="বিশেষ কোনো নির্দেশনা"></textarea></div><div class="formTotal">মোট অর্ডার: <span id="formTotal">৳0</span></div><button class="btn wa" style="width:100%" onclick="sendOrder()">WhatsApp-এ অর্ডার কনফার্ম করুন</button><p class="notice">* ডেলিভারি চার্জ প্রয়োজন অনুযায়ী পরে নিশ্চিত করা হবে।</p></div></div>
 <script>
 const products=[
-{id:1,name:"প্রাকৃতিক মধু",price:800,img:"./assets/honey.jpg",tag:"PURE HONEY",desc:"নির্বাচিত প্রাকৃতিক মধু, সুন্দর প্যাকেজিংয়ে।"},
-{id:2,name:"বিশুদ্ধ ঘি",price:1400,img:"./assets/ghee.jpg",tag:"PREMIUM GHEE",desc:"১ কেজি প্রিমিয়াম ঘি — সমৃদ্ধ স্বাদ ও ঘ্রাণ।"},
-{id:3,name:"খেজুরের গুড়",price:650,img:"./assets/date-jaggery.jpg",tag:"SATKHIRA SPECIAL",desc:"ঐতিহ্যবাহী খেজুরের গুড়ের বিশেষ সংগ্রহ।"}
+{id:1,name:"প্রাকৃতিক মধু",img:"./assets/honey.jpg",tag:"PURE HONEY",desc:"নির্বাচিত প্রাকৃতিক মধু, সুন্দর প্যাকেজিংয়ে। প্রতিদিনের খাদ্য তালিকায় স্বাস্থ্যকর সংযোজন হিসেবে ব্যবহার করা যায়।",
+ variants:[{id:"250g",label:"250 গ্রাম",price:280},{id:"500g",label:"500 গ্রাম",price:520},{id:"1kg",label:"1 কেজি",price:800}],
+ rating:4.7,reviews:[
+  {name:"রাফি হাসান",rating:5,date:"১২ আগস্ট, ২০২৬",text:"মধুর স্বাদ একদম খাঁটি, আগে যা কিনেছি তার চেয়ে অনেক ভালো। প্যাকেজিংও সুন্দর ছিল।"},
+  {name:"সাদিয়া আক্তার",rating:5,date:"২ আগস্ট, ২০২৬",text:"ডেলিভারি সময়মতো পেয়েছি, মধু দেখতে ও খেতে একদম আসল মনে হয়েছে।"},
+  {name:"ইমরান খান",rating:4,date:"২১ জুলাই, ২০২৬",text:"ভালো প্রোডাক্ট, দাম একটু বেশি মনে হয়েছে তবে কোয়ালিটি ভালো।"}
+ ]},
+{id:2,name:"বিশুদ্ধ ঘি",img:"./assets/ghee.jpg",tag:"PREMIUM GHEE",desc:"প্রিমিয়াম মানের বিশুদ্ধ ঘি — সমৃদ্ধ স্বাদ ও ঘ্রাণ। ঐতিহ্যবাহী পদ্ধতিতে তৈরি, রান্নায় বাড়তি স্বাদ যোগ করে।",
+ variants:[{id:"250g",label:"250 গ্রাম",price:450},{id:"500g",label:"500 গ্রাম",price:800},{id:"1kg",label:"1 কেজি",price:1400}],
+ rating:4.8,reviews:[
+  {name:"তানভীর আহমেদ",rating:5,date:"১৮ আগস্ট, ২০২৬",text:"ঘি এর ঘ্রাণ ও স্বাদ অসাধারণ, একদম গ্রামের বাড়ির ঘি এর মতো।"},
+  {name:"নুসরাত জাহান",rating:5,date:"৯ আগস্ট, ২০২৬",text:"প্যাকেজিং খুব যত্ন করে করা হয়েছিল, লিকেজ কিছু ছিল না।"},
+  {name:"সজীব হোসেন",rating:4,date:"৩০ জুলাই, ২০২৬",text:"মান ভালো, তবে ডেলিভারিতে একদিন বেশি সময় লেগেছে।"}
+ ]},
+{id:3,name:"খেজুরের গুড়",img:"./assets/date-jaggery.jpg",tag:"SATKHIRA SPECIAL",desc:"ঐতিহ্যবাহী খেজুরের গুড়ের বিশেষ সংগ্রহ। খাঁটি ও প্রাকৃতিক স্বাদে ভরপুর, পিঠা-পায়েসে ব্যবহারের জন্য উপযুক্ত।",
+ variants:[{id:"500g",label:"500 গ্রাম",price:350},{id:"1kg",label:"1 কেজি",price:650}],
+ rating:4.6,reviews:[
+  {name:"মিতু রহমান",rating:5,date:"১৫ আগস্ট, ২০২৬",text:"গুড়ের স্বাদ একদম খাঁটি, পায়েস রান্না করে খেয়েছি, অসাধারণ লেগেছে।"},
+  {name:"ফাহিম চৌধুরী",rating:4,date:"৫ আগস্ট, ২০২৬",text:"ভালো মানের গুড়, প্যাকেজিং আরেকটু মজবুত হলে ভালো হতো।"}
+ ]}
 ];
 let cart=JSON.parse(localStorage.getItem("shgCart")||"[]");
+let detailState={id:null,vid:null,qty:1};
 const money=n=>"৳"+n.toLocaleString("en-US");
 function imageFallback(el){el.onerror=null;el.style.objectFit="contain";el.style.padding="18px";el.src="./assets/hero.jpg"}
-function renderProducts(){document.getElementById("productList").innerHTML=products.map(p=>`<div class="card"><div class="pic"><img src="${p.img}" alt="${p.name}" loading="lazy" onerror="imageFallback(this)"></div><div class="body"><span class="tag">${p.tag}</span><h3>${p.name}</h3><p class="desc">${p.desc}</p><div class="price">${money(p.price)}</div><div class="cardActions"><button class="add" onclick="add(${p.id})">🛒 কার্টে যোগ করুন</button><button class="quick" onclick="buyNow(${p.id})">⚡</button></div></div></div>`).join("")}
+function starStr(r){let full=Math.round(r);return "★".repeat(full)+"☆".repeat(5-full)}
+function renderProducts(){document.getElementById("productList").innerHTML=products.map(p=>{let base=p.variants[0];return `<div class="card"><div class="pic" onclick="openDetail(${p.id})"><img src="${p.img}" alt="${p.name}" loading="lazy" onerror="imageFallback(this)"></div><div class="body"><span class="tag">${p.tag}</span><h3 onclick="openDetail(${p.id})">${p.name}</h3><div class="ratingLine"><span class="stars">${starStr(p.rating)}</span><span>${p.rating} (${p.reviews.length} রিভিউ)</span></div><p class="desc">${p.desc}</p><div class="price">${money(base.price)} <span style="font-size:11px;color:#9aa39c;font-weight:600">(${base.label} থেকে)</span></div><button class="viewBtn" onclick="openDetail(${p.id})">বিস্তারিত ও রিভিউ দেখুন ›</button><div class="cardActions" style="margin-top:10px"><button class="add" onclick="add(${p.id},'${base.id}',1)">🛒 কার্টে যোগ করুন</button><button class="quick" onclick="openDetail(${p.id})">⚡</button></div></div></div>`}).join("")}
+
+/* ---- Product detail modal ---- */
+function openDetail(id){let p=products.find(x=>x.id===id);detailState={id,vid:p.variants[0].id,qty:1};renderDetail();document.getElementById("detailModal").classList.add("show")}
+function closeDetail(){document.getElementById("detailModal").classList.remove("show")}
+function selectDetailVariant(vid){detailState.vid=vid;renderDetail()}
+function changeDetailQty(n){detailState.qty=Math.max(1,detailState.qty+n);renderDetail()}
+function renderDetail(){
+ let p=products.find(x=>x.id===detailState.id);if(!p)return;
+ let v=p.variants.find(x=>x.id===detailState.vid)||p.variants[0];
+ let variantHtml=p.variants.map(x=>`<div class="variantPill ${x.id===v.id?'active':''}" onclick="selectDetailVariant('${x.id}')"><b>${x.label}</b><span>${money(x.price)}</span></div>`).join("");
+ let reviewsHtml=p.reviews.map(r=>`<div class="reviewCard"><div class="rTop"><span class="rName">${r.name}</span><span class="rDate">${r.date}</span></div><span class="stars">${starStr(r.rating)}</span><p class="rText">${r.text}</p></div>`).join("");
+ document.getElementById("detailContent").innerHTML=`
+ <div class="detailTop">
+  <div class="detailPic"><img src="${p.img}" alt="${p.name}" onerror="imageFallback(this)"></div>
+  <div class="detailInfo">
+   <span class="tag">${p.tag}</span>
+   <h2>${p.name}</h2>
+   <div class="ratingLine"><span class="stars">${starStr(p.rating)}</span><b>${p.rating}</b><span>· ${p.reviews.length} রিভিউ</span></div>
+   <p class="detailDesc">${p.desc}</p>
+   <span class="variantLabel">কতটুকু নিবেন — পরিমাণ বাছাই করুন</span>
+   <div class="variantWrap">${variantHtml}</div>
+   <div class="detailQtyRow">
+     <div><span class="variantLabel" style="margin-bottom:6px">সংখ্যা</span><div class="detailQty"><button onclick="changeDetailQty(-1)">−</button><b>${detailState.qty}</b><button onclick="changeDetailQty(1)">+</button></div></div>
+     <div style="text-align:right"><span class="variantLabel">মোট মূল্য</span><div class="detailPrice">${money(v.price*detailState.qty)}</div></div>
+   </div>
+   <div class="detailActions">
+     <button class="btn wa" onclick="addDetailToCart()">🛒 কার্টে যোগ করুন</button>
+     <button class="btn gold" onclick="buyDetailNow()">⚡ এখনই কিনুন</button>
+   </div>
+  </div>
+ </div>
+ <div class="reviewsWrap">
+   <div class="reviewsHead"><h3>ক্রেতাদের রিভিউ</h3><span class="stars">${starStr(p.rating)} ${p.rating}/5</span></div>
+   ${reviewsHtml}
+ </div>`;
+}
+function addDetailToCart(){add(detailState.id,detailState.vid,detailState.qty);closeDetail()}
+function buyDetailNow(){add(detailState.id,detailState.vid,detailState.qty);closeDetail()}
+
 function save(){localStorage.setItem("shgCart",JSON.stringify(cart));renderCart()}
-function add(id){let x=cart.find(i=>i.id===id);if(x)x.qty++;else cart.push({id,qty:1});save();openCart()}
-function buyNow(id){add(id)}
-function renderCart(){let box=document.getElementById("items"),count=cart.reduce((a,b)=>a+b.qty,0),total=cart.reduce((a,i)=>a+products.find(p=>p.id===i.id).price*i.qty,0);document.getElementById("count").textContent=count;document.getElementById("total").textContent=money(total);document.getElementById("formTotal").textContent=money(total);if(!cart.length){box.innerHTML='<div class="empty">আপনার Cart এখনো খালি।<br><br>পণ্য থেকে “কার্টে যোগ করুন” চাপুন।</div>';return}box.innerHTML=cart.map(i=>{let p=products.find(x=>x.id===i.id);return `<div class="item"><img src="${p.img}" alt="${p.name}" onerror="imageFallback(this)"><div><h4>${p.name}</h4><p>${money(p.price)}</p><div class="qty"><button onclick="change(${p.id},-1)">−</button><b>${i.qty}</b><button onclick="change(${p.id},1)">+</button></div></div><button class="remove" onclick="removeItem(${p.id})">✕</button></div>`}).join("")}
-function change(id,n){let i=cart.find(x=>x.id===id);i.qty+=n;if(i.qty<=0)cart=cart.filter(x=>x.id!==id);save()}
-function removeItem(id){cart=cart.filter(x=>x.id!==id);save()}
+function add(id,vid,qty){qty=qty||1;let p=products.find(x=>x.id===id);vid=vid||p.variants[0].id;let x=cart.find(i=>i.id===id&&i.vid===vid);if(x)x.qty+=qty;else cart.push({id,vid,qty});save();openCart()}
+function renderCart(){
+ let box=document.getElementById("items");
+ let lineInfo=cart.map(i=>{let p=products.find(x=>x.id===i.id);let v=p.variants.find(x=>x.id===i.vid);return{p,v,i}});
+ let count=cart.reduce((a,b)=>a+b.qty,0);
+ let total=lineInfo.reduce((a,l)=>a+l.v.price*l.i.qty,0);
+ document.getElementById("count").textContent=count;document.getElementById("total").textContent=money(total);document.getElementById("formTotal").textContent=money(total);
+ if(!cart.length){box.innerHTML='<div class="empty">আপনার Cart এখনো খালি।<br><br>পণ্য থেকে "কার্টে যোগ করুন" চাপুন।</div>';return}
+ box.innerHTML=lineInfo.map(({p,v,i})=>`<div class="item"><img src="${p.img}" alt="${p.name}" onerror="imageFallback(this)"><div><h4>${p.name}</h4><div style="font-size:12px;color:#9aa39c;font-weight:700">${v.label}</div><p>${money(v.price)}</p><div class="qty"><button onclick="change(${p.id},'${v.id}',-1)">−</button><b>${i.qty}</b><button onclick="change(${p.id},'${v.id}',1)">+</button></div></div><button class="remove" onclick="removeItem(${p.id},'${v.id}')">✕</button></div>`).join("")
+}
+function change(id,vid,n){let i=cart.find(x=>x.id===id&&x.vid===vid);i.qty+=n;if(i.qty<=0)cart=cart.filter(x=>!(x.id===id&&x.vid===vid));save()}
+function removeItem(id,vid){cart=cart.filter(x=>!(x.id===id&&x.vid===vid));save()}
 function openCart(){renderCart();drawer.classList.add("show");overlay.classList.add("show")}
 function closeCart(){drawer.classList.remove("show");overlay.classList.remove("show")}
 function checkout(){if(!cart.length){alert("আপনার Cart খালি।");return}closeCart();modal.classList.add("show")}
 function closeCheckout(){modal.classList.remove("show")}
-function sendOrder(){let name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim(),address=document.getElementById("address").value.trim(),note=document.getElementById("note").value.trim();if(!name||!phone||!address){alert("নাম, মোবাইল নম্বর ও ঠিকানা দিন।");return}let lines=cart.map(i=>{let p=products.find(x=>x.id===i.id);return `• ${p.name} × ${i.qty} = ${money(p.price*i.qty)}`});let total=cart.reduce((a,i)=>a+products.find(p=>p.id===i.id).price*i.qty,0);let msg=`🛒 *নতুন অর্ডার — SATKHIRA HONEY & GHEE*%0A%0A👤 নাম: ${name}%0A📞 মোবাইল: ${phone}%0A📍 ঠিকানা: ${address}%0A%0A📦 *অর্ডার:*%0A${lines.join("%0A")}%0A%0A💰 *মোট: ${money(total)}*${note?`%0A📝 নোট: ${note}`:""}`;window.open("https://wa.me/8801965419892?text="+encodeURIComponent(decodeURIComponent(msg)),"_blank")}
+function sendOrder(){
+ let name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim(),address=document.getElementById("address").value.trim(),note=document.getElementById("note").value.trim();
+ if(!name||!phone||!address){alert("নাম, মোবাইল নম্বর ও ঠিকানা দিন।");return}
+ let lineInfo=cart.map(i=>{let p=products.find(x=>x.id===i.id);let v=p.variants.find(x=>x.id===i.vid);return{p,v,i}});
+ let lines=lineInfo.map(({p,v,i})=>`• ${p.name} (${v.label}) × ${i.qty} = ${money(v.price*i.qty)}`);
+ let total=lineInfo.reduce((a,l)=>a+l.v.price*l.i.qty,0);
+ let msg=`🛒 *নতুন অর্ডার — SATKHIRA HONEY & GHEE*%0A%0A👤 নাম: ${name}%0A📞 মোবাইল: ${phone}%0A📍 ঠিকানা: ${address}%0A%0A📦 *অর্ডার:*%0A${lines.join("%0A")}%0A%0A💰 *মোট: ${money(total)}*${note?`%0A📝 নোট: ${note}`:""}`;
+ window.open("https://wa.me/8801965419892?text="+encodeURIComponent(decodeURIComponent(msg)),"_blank")
+}
 renderProducts();renderCart();
 </script></body></html>
