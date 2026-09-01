@@ -3,579 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>সাতক্ষীরা হানি এন্ড ঘি</title>
-<meta name="description" content="সাতক্ষীরা হানি এন্ড ঘি — সাতক্ষীরার খামার থেকে সরাসরি ১০০% খাঁটি মধু ও ঘি, সারা বাংলাদেশে হোম ডেলিভারি। এখনই হোয়াটসঅ্যাপে অর্ডার করুন।">
+<title>SATKHIRA HONEY & GHEE | সাতক্ষীরার খাঁটি স্বাদ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#08070A; --forest:#101A14; --forest-2:#182420;
-    --gold:#E3C07A; --neon:#FFC24B; --neon-2:#FFE9AE; --amber:#D98F1C;
-    --bronze:#6E4A28; --cream:#F6EEDA; --cream-dim:#B9AC8A;
-    --neon-glow:rgba(255,180,60,0.6); --neon-glow-soft:rgba(255,210,120,0.32);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:
-      radial-gradient(ellipse at 20% 0%, rgba(255,180,60,0.05), transparent 45%),
-      radial-gradient(ellipse at 85% 20%, rgba(255,180,60,0.04), transparent 40%),
-      var(--ink);
-    color:var(--cream); font-family:'Hind Siliguri',sans-serif; overflow-x:hidden;
-  }
-  a{ text-decoration:none; color:inherit; }
-  .serif{ font-family:'Tiro Bangla',serif; }
-  img,svg{ display:block; }
+:root{--green:#031f17;--green2:#073d2d;--gold:#d8a63d;--gold2:#f4d57d;--cream:#f8f5ed;--ink:#173128;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans Bengali",sans-serif;background:var(--cream);color:var(--ink)}
+a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
+header{height:92px;background:#02130f;position:sticky;top:0;z-index:50;border-bottom:1px solid #d8a63d33}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:12px;color:#f3d47c}
+.logoMark{width:58px;height:58px;border:1px solid var(--gold);border-radius:16px;display:grid;place-items:center;font-size:31px;background:#d8a63d12}
+.logo strong{display:block;font-family:Cinzel,serif;font-size:21px;letter-spacing:2px;line-height:1.05}.logo span{display:block;font-family:Cinzel,serif;font-size:11px;letter-spacing:4px;margin-top:5px}
+.menu{display:flex;gap:28px;color:#eee;font-weight:700;font-size:14px}.menu a:hover{color:var(--gold2)}
+.icons{display:flex;gap:9px}.round{width:46px;height:46px;border-radius:50%;border:1px solid #d8a63d88;color:#f3d47c;display:grid;place-items:center;background:transparent;font-size:19px}
+.mobileMenu{display:none}
+.hero{min-height:670px;background:linear-gradient(90deg,#061b15f5 0%,#061b15ce 35%,#061b1570 62%,#061b1520),url('premium-hero.jpg') center/cover;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:130px;background:linear-gradient(transparent,#061b15aa)}
+.heroContent{position:relative;z-index:2;padding:65px 0;width:55%}.eyebrow{color:var(--gold2);letter-spacing:4px;font:700 11px Poppins,sans-serif}
+.hero h1{font-family:Cinzel,"Noto Sans Bengali",serif;font-size:clamp(48px,6vw,85px);line-height:.98;margin:18px 0 12px;color:#f5d77f;text-shadow:0 8px 30px #000}
+.hero h1 span{display:block;font-size:.62em;color:white;letter-spacing:3px;margin-top:10px}.hero p{color:#f2eee0;font-size:18px;line-height:1.8;max-width:600px}
+.goldline{width:250px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px 0}
+.trust{display:flex;gap:18px;margin:24px 0}.trustItem{color:#eee;text-align:center;border-right:1px solid #ffffff2e;padding-right:18px;font-size:12px}.trustItem:last-child{border:0}.trustItem b{display:block;color:var(--gold2);font-size:25px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{min-height:54px;padding:0 22px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;transition:.3s;position:relative;overflow:hidden}.btn:before{content:"";position:absolute;width:30px;height:130px;background:#fff8;transform:translateX(-90px) rotate(25deg);transition:.7s}.btn:hover:before{transform:translateX(240px) rotate(25deg)}.btn:hover{transform:translateY(-3px);box-shadow:0 0 30px #d8a63d77}.primary{background:linear-gradient(135deg,#f2cf6d,#b57a1e);color:#102419}.whatsapp{background:#0c503a;border:1px solid #2b936f;color:white}.facebook{background:#1877f2;color:white}.phone{background:#e6c15b;color:#102419}
+.heroBadge{position:absolute;right:4%;bottom:55px;z-index:3;padding:25px 30px;background:#063d2be8;border:1px solid var(--gold);border-radius:25px 25px 0 25px;color:#f4d57d;text-align:center;font-weight:800;font-size:18px;box-shadow:0 20px 40px #0006}
+.features{background:#062d21;padding:0 0 25px}.featureGrid{transform:translateY(-35px);background:#05291e;border:1px solid #ffffff15;border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);padding:22px 10px;color:#eee;box-shadow:0 15px 30px #0002}.feature{text-align:center;border-right:1px solid #d8a63d2e;padding:8px;font-size:13px}.feature:last-child{border:0}.feature b{display:block;color:var(--gold2);font-size:25px;margin-bottom:5px}
+.section{padding:85px 0}.title{text-align:center;margin-bottom:42px}.title small{color:#a97823;font:800 11px Poppins;letter-spacing:3px}.title h2{font-size:42px;margin:8px 0;color:#18372b}.title p{color:#718078;margin:0}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 12px 35px #193d2b17;transition:.35s}.card:hover{transform:translateY(-8px);box-shadow:0 20px 45px #193d2b25}.cardImg{height:255px;overflow:hidden;background:#ddd}.cardImg img{width:100%;height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.08)}.cardBody{padding:18px}.label{display:inline-block;background:#d8a63d18;color:#a26d14;padding:5px 9px;border-radius:20px;font-size:10px;font-weight:800}.card h3{margin:10px 0 4px;font-size:20px}.stars{color:#e1a823;font-size:13px}.price{font-size:18px;font-weight:800;margin:10px 0;color:#8a5d17}.cardActions{display:flex;gap:8px}.details{flex:1;background:#083b2b;color:white;border:0;border-radius:9px;padding:11px;font-family:inherit;font-weight:700}.cartBtn{width:48px;border:0;border-radius:9px;background:#062d21;color:#f1cf71;font-size:20px}
+.about{background:#06291e;color:white}.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.aboutImage{height:430px;border-radius:28px;overflow:hidden;border:1px solid #d8a63d66}.aboutImage img{width:100%;height:100%;object-fit:cover}.about h2{font-size:45px;color:#f4d57d;margin:12px 0}.about p{color:#dce8e1;line-height:1.9}.ticks{display:grid;gap:11px;margin-top:20px}.ticks div{background:#ffffff0c;border:1px solid #ffffff10;border-radius:10px;padding:12px}.order{background:linear-gradient(135deg,#031b14,#0a4a35);color:white}.orderGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.orderCard{background:#ffffff0a;border:1px solid #ffffff1c;border-radius:22px;padding:30px;text-align:center}.orderCard .bigIcon{font-size:42px}.orderCard h3{color:#f4d57d}.orderCard p{color:#d4e0da;font-size:13px;line-height:1.7}.orderCard .btn{width:100%;margin-top:10px}
+footer{background:#020f0b;color:#c5d2cc;padding:45px 0 20px}.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.foot strong{font-family:Cinzel;color:#e6c56b;letter-spacing:2px}.copy{border-top:1px solid #ffffff14;margin-top:25px;padding-top:18px;text-align:center;font-size:12px}
+.floatWa{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:#25d366;color:white;display:grid;place-items:center;font-size:31px;z-index:40;box-shadow:0 0 0 0 #25d36688;animation:pulse 2s infinite}@keyframes pulse{70%{box-shadow:0 0 0 16px transparent}}
+@media(max-width:900px){.menu{display:none}.mobileMenu{display:block}.heroContent{width:80%}.products{grid-template-columns:repeat(2,1fr)}.aboutGrid{grid-template-columns:1fr}.orderGrid{grid-template-columns:1fr}}
+@media(max-width:600px){header{height:76px}.logo strong{font-size:13px}.logo span{font-size:7px}.logoMark{width:46px;height:46px}.icons .round:not(:last-child){display:none}.hero{min-height:690px}.heroContent{width:100%;padding:55px 0 120px}.hero h1{font-size:47px}.hero p{font-size:15px}.trust{gap:7px}.trustItem{font-size:10px;padding-right:7px}.featureGrid{grid-template-columns:repeat(2,1fr);transform:translateY(-20px)}.feature:nth-child(2){border:0}.feature:nth-child(-n+2){border-bottom:1px solid #d8a63d2e}.products{grid-template-columns:1fr}.title h2{font-size:32px}.heroBadge{right:5%;bottom:22px;font-size:13px;padding:15px}.section{padding:65px 0}.about h2{font-size:33px}.orderGrid{grid-template-columns:1fr}.cardImg{height:310px}}
 
-  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
-  .reveal.in{ opacity:1; transform:translateY(0); }
+/* Premium real social/contact icons */
+.actionSvg{width:21px;height:21px;flex:0 0 21px;fill:currentColor;display:inline-block;vertical-align:middle}
+.orderCard .bigIcon{width:68px;height:68px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center}
+.orderCard .bigIcon svg{width:36px;height:36px;fill:currentColor}
+.fbIcon{color:#1877f2;background:#ffffff12;border:1px solid #1877f255}
+.waIcon{color:#25d366;background:#ffffff12;border:1px solid #25d36655}
+.callIcon{color:#f4d57d;background:#ffffff12;border:1px solid #d8a63d55}
+.floatWa svg{width:34px;height:34px;fill:#fff}
 
-  .neon-text{ text-shadow:0 0 6px rgba(255,196,75,0.5), 0 0 18px rgba(255,196,75,0.3); }
-  .neon-rule{ height:1px; width:70px; margin:16px auto 0; background:linear-gradient(90deg, transparent, var(--neon), transparent);
-    box-shadow:0 0 10px var(--neon-glow), 0 0 20px var(--neon-glow-soft); animation:rulePulse 3.2s ease-in-out infinite; }
-  @keyframes rulePulse{ 0%,100%{opacity:.55;} 50%{opacity:1;} }
-  @keyframes float{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-18px);} }
-  @keyframes bob{ 0%,100%{ transform:translateY(0) rotate(0deg);} 50%{ transform:translateY(-10px) rotate(1deg);} }
-  @keyframes padPulse{ 0%,100%{ opacity:.5; transform:translateX(-50%) scale(0.9);} 50%{ opacity:1; transform:translateX(-50%) scale(1.08);} }
-  @keyframes neonPulse{
-    0%,100%{ filter:drop-shadow(0 0 8px rgba(255,180,60,0.5)) drop-shadow(0 0 18px rgba(255,180,60,0.24)); }
-    50%{ filter:drop-shadow(0 0 16px rgba(255,196,75,0.85)) drop-shadow(0 0 38px rgba(255,196,75,0.45)); }
-  }
-
-  /* ===== FLOATING BACKGROUND PARTICLES ===== */
-  .particles{ position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
-  .particle{ position:absolute; bottom:-60px; animation-name:riseFade; animation-timing-function:linear; animation-iteration-count:infinite; }
-  @keyframes riseFade{
-    0%{ transform:translateY(0) scale(0.8) rotate(0deg); opacity:0; }
-    8%{ opacity:.5; }
-    50%{ opacity:.28; }
-    92%{ opacity:0; }
-    100%{ transform:translateY(-118vh) scale(1.15) rotate(20deg); opacity:0; }
-  }
-  .p-drop{ filter:drop-shadow(0 0 7px rgba(255,196,75,0.55)); }
-  .p-leaf{ filter:drop-shadow(0 0 6px rgba(62,90,68,0.5)); }
-  .p-spark{ filter:drop-shadow(0 0 8px rgba(255,233,174,0.7)); }
-  .p1{ left:5%; width:16px; animation-duration:19s; animation-delay:0s; }
-  .p2{ left:16%; width:10px; animation-duration:14s; animation-delay:2.5s; }
-  .p3{ left:27%; width:20px; animation-duration:23s; animation-delay:5s; }
-  .p4{ left:39%; width:9px; animation-duration:16s; animation-delay:1s; }
-  .p5{ left:51%; width:15px; animation-duration:21s; animation-delay:7s; }
-  .p6{ left:63%; width:11px; animation-duration:17s; animation-delay:3.5s; }
-  .p7{ left:75%; width:18px; animation-duration:25s; animation-delay:6s; }
-  .p8{ left:87%; width:10px; animation-duration:15s; animation-delay:4.5s; }
-  .p9{ left:94%; width:14px; animation-duration:20s; animation-delay:9s; }
-  .p10{ left:8%; width:8px; animation-duration:13s; animation-delay:10s; }
-
-  /* ===== HERO WATERMARK ===== */
-  .hero-watermark{
-    position:absolute; top:50%; left:50%; width:640px; height:640px;
-    transform:translate(-50%,-50%); opacity:0.05; z-index:1; pointer-events:none;
-    animation:watermarkSpin 70s linear infinite;
-  }
-  @keyframes watermarkSpin{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
-
-  /* ===== NAV ===== */
-  nav{
-    position:sticky; top:0; z-index:50;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 28px; background:rgba(8,7,10,0.78); backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,196,75,0.14);
-  }
-  .brand{ display:flex; align-items:center; gap:10px; font-family:'Tiro Bangla',serif; font-size:16px; color:var(--neon-2); }
-  .brand svg{ flex-shrink:0; filter:drop-shadow(0 0 6px rgba(255,196,75,0.5)); animation:neonPulse 4s ease-in-out infinite; }
-  .nav-links{ display:flex; gap:26px; font-size:14px; color:var(--cream-dim); }
-  .nav-links a:hover{ color:var(--neon); }
-  .nav-cta{
-    background:linear-gradient(120deg, var(--neon), var(--amber)); color:#1a1206;
-    padding:9px 18px; border-radius:100px; font-weight:600; font-size:13px;
-    box-shadow:0 0 16px rgba(255,196,75,0.35);
-  }
-  .menu-btn{ display:none; background:none; border:none; color:var(--cream); font-size:22px; cursor:pointer; }
-  @media(max-width:760px){
-    .nav-links{ display:none; }
-    .menu-btn{ display:block; }
-  }
-
-  /* ===== HERO ===== */
-  .hero{
-    min-height:92vh; position:relative; display:flex; flex-direction:column;
-    align-items:center; justify-content:center; text-align:center; padding:60px 24px;
-    background: radial-gradient(ellipse at 50% 10%, rgba(255,180,60,0.10), transparent 55%),
-      linear-gradient(180deg,#08070A 0%, #10140C 55%, #08070A 100%);
-    overflow:hidden;
-  }
-  .glow{ position:absolute; border-radius:50%; filter:blur(70px); pointer-events:none; animation:float 9s ease-in-out infinite; }
-  .glow.g1{ width:420px;height:420px; background:rgba(255,180,60,0.13); top:-130px; left:-100px; }
-  .glow.g2{ width:360px;height:360px; background:rgba(255,210,120,0.10); bottom:-150px; right:-80px; animation-delay:2s;}
-  .eyebrow{ letter-spacing:.2em; font-size:12px; text-transform:uppercase; color:var(--neon); font-weight:600; position:relative; z-index:2; }
-  .eyebrow::before,.eyebrow::after{ content:"—"; margin:0 10px; color:var(--bronze); }
-  .hero h1{
-    font-family:'Tiro Bangla',serif; font-weight:400; font-size:clamp(34px,6.4vw,58px);
-    margin:20px 0 14px; position:relative; z-index:2;
-    background:linear-gradient(100deg, var(--neon-2) 0%, var(--neon) 30%, var(--amber) 50%, var(--neon) 70%, var(--neon-2) 100%);
-    background-size:220% auto; -webkit-background-clip:text; background-clip:text; color:transparent;
-    animation:shimmer 6s linear infinite; filter:drop-shadow(0 0 16px rgba(255,196,75,0.3));
-  }
-  @keyframes shimmer{ 0%{ background-position:0% center;} 100%{ background-position:220% center;} }
-  .hero p.tag{ font-size:16px; color:var(--cream-dim); max-width:480px; margin:0 auto; position:relative; z-index:2; }
-  .hero-ctas{ display:flex; gap:16px; margin-top:34px; position:relative; z-index:2; flex-wrap:wrap; justify-content:center; }
-  .btn-primary, .btn-ghost{ padding:13px 26px; border-radius:100px; font-size:14px; font-weight:600; display:inline-flex; align-items:center; gap:8px; transition:transform .3s ease, box-shadow .3s ease;}
-  .btn-primary{ background:linear-gradient(120deg, var(--neon), var(--amber)); color:#1a1206; box-shadow:0 0 22px rgba(255,196,75,0.4); }
-  .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 0 32px rgba(255,196,75,0.6); }
-  .btn-ghost{ border:1px solid rgba(255,196,75,0.4); color:var(--neon-2); }
-  .btn-ghost:hover{ background:rgba(255,196,75,0.08); transform:translateY(-3px); }
-
-  .hero-bottles{ display:flex; gap:50px; margin-top:52px; position:relative; z-index:2; align-items:flex-end;}
-  .bstage{ position:relative; display:flex; flex-direction:column; align-items:center; }
-  .bstage .pad{ position:absolute; bottom:-6px; left:50%; width:140px; height:40px; border-radius:50%;
-    background:radial-gradient(ellipse, rgba(255,180,60,0.5), transparent 70%); filter:blur(10px); animation:padPulse 3s ease-in-out infinite; }
-  .bottle-float{ animation:bob 5s ease-in-out infinite, neonPulse 3s ease-in-out infinite; transform-origin:bottom center;}
-  .bottle-float.b2{ animation-delay:1s, 0.6s; }
-
-  /* ===== TRUST STRIP ===== */
-  .trust-strip{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:36px;
-    padding:26px 24px; background:var(--forest); border-top:1px solid rgba(255,196,75,0.1); border-bottom:1px solid rgba(255,196,75,0.1);
-  }
-  .trust-item{ display:flex; align-items:center; gap:10px; font-size:13px; color:var(--cream-dim); }
-  .trust-item .dot{ width:6px;height:6px;border-radius:50%; background:var(--neon); box-shadow:0 0 8px var(--neon-glow); }
-
-  /* ===== SECTIONS ===== */
-  section{ max-width:1120px; margin:0 auto; padding:110px 24px 0; position:relative; z-index:1; }
-  .section-head{ text-align:center; margin-bottom:50px; }
-  .section-eyebrow{ font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--neon); font-weight:600; }
-  .section-title{ font-family:'Tiro Bangla',serif; font-size:clamp(26px,4vw,38px); margin-top:10px; color:var(--cream); }
-  .section-sub{ font-size:14px; color:var(--cream-dim); margin-top:10px; max-width:560px; margin-left:auto; margin-right:auto; }
-
-  /* ===== ABOUT ===== */
-  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
-  .about-copy p{ font-size:15px; line-height:2; color:var(--cream-dim); margin-bottom:16px; }
-  .about-copy b{ color:var(--neon-2); }
-  .about-art{ display:flex; justify-content:center; }
-  @media(max-width:800px){ .about-grid{ grid-template-columns:1fr; } }
-
-  /* ===== PRODUCTS ===== */
-  .product-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
-  @media(max-width:800px){ .product-grid{ grid-template-columns:1fr; } }
-  .product-card{
-    background:radial-gradient(ellipse at 50% 0%, rgba(255,180,60,0.08), transparent 60%), var(--forest);
-    border-radius:26px; padding:44px 30px 34px; border:1px solid rgba(255,196,75,0.16);
-    text-align:center; position:relative; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease;
-  }
-  .product-card:hover{ transform:translateY(-8px); box-shadow:0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(255,196,75,0.15); }
-  .product-card .spot{ position:absolute; left:50%; bottom:70px; transform:translateX(-50%); width:130px; height:36px; border-radius:50%;
-    background:radial-gradient(ellipse, rgba(255,196,75,0.55), transparent 70%); filter:blur(9px); animation:padPulse 3s ease-in-out infinite; }
-  .product-card svg{ position:relative; z-index:2; animation:bob 5s ease-in-out infinite, neonPulse 3.2s ease-in-out infinite; }
-  .product-card .pname{ font-family:'Tiro Bangla',serif; font-size:22px; color:var(--neon-2); margin-top:20px; }
-  .product-card .pdesc{ font-size:13px; color:var(--cream-dim); margin-top:8px; }
-  .product-photo-wrap{ position:relative; border-radius:20px; overflow:hidden; margin:0 auto; max-width:260px; }
-  .product-photo-wrap::after{
-    content:""; position:absolute; inset:0; border-radius:20px; border:1px solid rgba(255,196,75,0.4);
-    box-shadow:inset 0 0 30px rgba(255,196,75,0.08); pointer-events:none;
-  }
-  .product-photo{
-    width:100%; display:block; border-radius:20px;
-    animation:bob 5s ease-in-out infinite, neonPulse 3.2s ease-in-out infinite;
-    transition:transform .4s ease;
-  }
-  .product-card:hover .product-photo{ transform:scale(1.03); }
-  .price-list{ margin-top:20px; display:flex; flex-direction:column; gap:8px; }
-  .price-row{ display:flex; justify-content:space-between; font-size:14px; padding:10px 16px; background:rgba(255,196,75,0.06); border-radius:10px; border:1px solid rgba(255,196,75,0.1); }
-  .price-row .amt{ color:var(--neon); font-weight:600; }
-  .product-card .order-btn{ margin-top:22px; display:inline-block; }
-
-  /* ===== PROCESS ===== */
-  .process{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
-  @media(max-width:800px){ .process{ grid-template-columns:1fr 1fr; } }
-  .step{ background:var(--forest-2); border-radius:18px; padding:26px 20px; border:1px solid rgba(255,196,75,0.12); text-align:center; transition:transform .35s ease, box-shadow .35s ease; }
-  .step:hover{ transform:translateY(-6px); box-shadow:0 0 22px rgba(255,196,75,0.2); }
-  .step .num{ font-family:'Tiro Bangla',serif; font-size:26px; color:var(--neon); text-shadow:0 0 10px rgba(255,196,75,0.5); }
-  .step .stitle{ font-size:14px; font-weight:600; color:var(--cream); margin-top:10px; }
-  .step .sdesc{ font-size:12px; color:var(--cream-dim); margin-top:6px; line-height:1.6; }
-
-  /* ===== TESTIMONIAL ===== */
-  .testi-row{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; }
-  @media(max-width:800px){ .testi-row{ grid-template-columns:1fr; } }
-  .testi{ background:var(--forest-2); border-radius:18px; padding:26px; border:1px solid rgba(255,196,75,0.12); transition:transform .35s ease, box-shadow .35s ease; }
-  .testi:hover{ transform:translateY(-6px); box-shadow:0 0 22px rgba(255,196,75,0.18); }
-  .testi .stars{ color:var(--neon); font-size:14px; letter-spacing:2px; text-shadow:0 0 8px rgba(255,196,75,0.6); }
-  .testi p{ font-size:13.5px; color:var(--cream-dim); margin-top:12px; line-height:1.8; }
-  .testi .who{ margin-top:14px; font-size:13px; color:var(--neon-2); }
-
-  /* ===== ORDER / CONTACT ===== */
-  .order-box{
-    background:linear-gradient(135deg, var(--forest-2), var(--forest));
-    border-radius:28px; padding:56px 40px; border:1px solid rgba(255,196,75,0.2);
-    text-align:center; position:relative; overflow:hidden;
-  }
-  .order-box::after{ content:""; position:absolute; right:-60px; top:-60px; width:260px;height:260px;border-radius:50%;
-    background:radial-gradient(circle, rgba(255,196,75,0.18), transparent 70%); animation:float 8s ease-in-out infinite;}
-  .order-box h3{ font-family:'Tiro Bangla',serif; font-size:26px; color:var(--neon-2); position:relative; z-index:2;}
-  .order-box p{ font-size:14px; color:var(--cream-dim); margin-top:10px; position:relative; z-index:2;}
-  .contact-list{ margin-top:26px; display:flex; flex-wrap:wrap; justify-content:center; gap:16px; position:relative; z-index:2;}
-  .contact-pill{ display:flex; align-items:center; gap:8px; background:rgba(255,196,75,0.08); border:1px solid rgba(255,196,75,0.2); padding:10px 18px; border-radius:100px; font-size:13px; transition:transform .3s ease, box-shadow .3s ease; }
-  .contact-pill:hover{ transform:translateY(-3px); box-shadow:0 0 16px rgba(255,196,75,0.25); }
-  .contact-pill .dot{ width:6px;height:6px;border-radius:50%; background:var(--neon); box-shadow:0 0 8px var(--neon-glow); }
-  .order-box .btn-primary{ margin-top:26px; position:relative; z-index:2; }
-
-  /* ===== ORDER DASHBOARD ===== */
-  .order-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:44px; position:relative; z-index:2; text-align:left; }
-  @media(max-width:800px){ .order-grid{ grid-template-columns:1fr; } }
-  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  .field{ margin-bottom:14px; }
-  .field label{ display:block; font-size:12px; color:var(--cream-dim); margin-bottom:6px; letter-spacing:.04em; }
-  .field input, .field select, .field textarea{
-    width:100%; background:rgba(255,196,75,0.07); border:1px solid rgba(255,196,75,0.25);
-    border-radius:10px; padding:11px 14px; color:var(--cream); font-family:'Hind Siliguri',sans-serif; font-size:14px; outline:none;
-    transition:border-color .3s ease, box-shadow .3s ease;
-  }
-  .field select option{ background:#152018; color:var(--cream); }
-  .field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--neon); box-shadow:0 0 12px rgba(255,196,75,0.25); }
-  .field textarea{ resize:vertical; font-family:'Hind Siliguri',sans-serif; }
-  .btn-primary.full{ width:100%; justify-content:center; border:none; cursor:pointer; font-family:'Hind Siliguri',sans-serif; font-size:15px; }
-  .order-side{ display:flex; flex-direction:column; gap:12px; }
-  .side-title{ font-size:13px; color:var(--neon-2); font-weight:600; margin-bottom:2px; }
-  .contact-pill.wide{ justify-content:flex-start; width:100%; }
-  .owner-note{ margin-top:8px; font-size:12.5px; color:var(--cream-dim); }
-  .owner-note b{ color:var(--neon-2); }
-  .order-note{ margin-top:16px; font-size:12px; color:var(--cream-dim); }
-
-  /* ===== FLOATING WHATSAPP ===== */
-  .wa-float{
-    position:fixed; right:20px; bottom:20px; z-index:80;
-    width:58px; height:58px; border-radius:50%;
-    background:#25D366; display:flex; align-items:center; justify-content:center;
-    box-shadow:0 0 18px rgba(37,211,102,0.55), 0 10px 24px rgba(0,0,0,0.4);
-    animation:waPulse 2.6s ease-in-out infinite;
-  }
-  .wa-float:hover{ animation-play-state:paused; transform:scale(1.06); }
-  @keyframes waPulse{ 0%,100%{ box-shadow:0 0 14px rgba(37,211,102,0.5), 0 10px 24px rgba(0,0,0,0.4);} 50%{ box-shadow:0 0 26px rgba(37,211,102,0.85), 0 10px 24px rgba(0,0,0,0.4);} }
-
-  /* ===== FOOTER ===== */
-  footer{ text-align:center; padding:90px 24px 40px; color:var(--cream-dim); font-size:13px; }
-  footer .fserif{ font-family:'Tiro Bangla',serif; color:var(--neon-2); font-size:17px; display:block; margin-bottom:10px; }
-  .foot-links{ margin-top:18px; display:flex; justify-content:center; gap:20px; font-size:13px; }
-  .foot-links a:hover{ color:var(--neon); }
-  .note{ margin-top:26px; font-size:11.5px; color:#7c6f57; max-width:520px; margin-left:auto; margin-right:auto; line-height:1.7; }
 </style>
 </head>
 <body>
+<header><div class="wrap nav">
+<a class="logo" href="#"><div class="logoMark">🍯</div><div><strong>SATKHIRA</strong><span>HONEY & GHEE</span></div></a>
+<nav class="menu"><a href="#home">হোম</a><a href="#products">আমাদের পণ্য</a><a href="#about">আমাদের সম্পর্কে</a><a href="#order">অর্ডার</a><a href="#contact">যোগাযোগ</a></nav>
+<div class="icons"><div class="round">⌕</div><a class="round" href="#order">☏</a><button class="round mobileMenu">☰</button></div>
+</div></header>
 
-<!-- ===== FLOATING BACKGROUND PARTICLES ===== -->
-<div class="particles" aria-hidden="true">
-  <svg class="particle p-drop p1" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#FFC24B"/></svg>
-  <svg class="particle p-leaf p2" viewBox="0 0 24 24"><path d="M4 12 C4 6 9 3 20 3 C20 14 16 20 4 12 Z" fill="#3E5A44"/></svg>
-  <svg class="particle p-spark p3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#FFE9AE"/></svg>
-  <svg class="particle p-drop p4" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#D98F1C"/></svg>
-  <svg class="particle p-leaf p5" viewBox="0 0 24 24"><path d="M4 12 C4 6 9 3 20 3 C20 14 16 20 4 12 Z" fill="#3E5A44"/></svg>
-  <svg class="particle p-spark p6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#FFC24B"/></svg>
-  <svg class="particle p-drop p7" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#FFC24B"/></svg>
-  <svg class="particle p-leaf p8" viewBox="0 0 24 24"><path d="M4 12 C4 6 9 3 20 3 C20 14 16 20 4 12 Z" fill="#3E5A44"/></svg>
-  <svg class="particle p-spark p9" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#FFE9AE"/></svg>
-  <svg class="particle p-drop p10" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#D98F1C"/></svg>
-</div>
+<section class="hero" id="home"><div class="wrap heroContent">
+<div class="eyebrow">✦ AUTHENTIC TASTE FROM SATKHIRA ✦</div>
+<h1>SATKHIRA <span>HONEY & GHEE</span></h1>
+<div class="goldline"></div>
+<p>সাতক্ষীরার ঐতিহ্য ও প্রাকৃতিক স্বাদের অনুপ্রেরণায় নির্বাচিত <b>মধু, বিশুদ্ধ ঘি ও খেজুরের গুড়</b>—এখন আপনার ঘরে।</p>
+<div class="trust"><div class="trustItem"><b>🌿</b>প্রাকৃতিক ও খাঁটি</div><div class="trustItem"><b>🛡</b>বিশ্বাস ও মানের নিশ্চয়তা</div><div class="trustItem"><b>🚚</b>সারা দেশে হোম ডেলিভারি</div><div class="trustItem"><b>♥</b>যত্নসহ প্যাকেজিং</div></div>
+<div class="actions"><a class="btn primary" href="#products">🛒 এখনই অর্ডার করুন</a><a class="btn whatsapp" href="https://wa.me/8801965419892" target="_blank"><svg class="actionSvg" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 2.01C8.29 2.01 2 8.3 2 16.03c0 2.47.65 4.88 1.88 7L2 30l7.18-1.84a13.96 13.96 0 006.83 1.77c7.73 0 14.02-6.29 14.02-14.02S23.75 2.01 16.02 2.01zm0 25.55a11.5 11.5 0 01-5.87-1.61l-.42-.25-4.26 1.09 1.14-4.15-.27-.43a11.51 11.51 0 01-1.77-6.18c0-6.34 5.16-11.5 11.5-11.5 6.34 0 11.5 5.16 11.5 11.5 0 6.34-5.16 11.53-11.53 11.53z"/></svg> WhatsApp অর্ডার</a><a class="btn facebook" href="https://www.facebook.com/share/1Bf4Q4whLD/" target="_blank"><svg class="actionSvg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.32 0 2.7.24 2.7.24v2.97h-1.52c-1.5 0-1.97.94-1.97 1.9v2.25h3.35l-.54 3.49h-2.81V24C19.61 23.07 24 18.09 24 12.07z"/></svg> Facebook Page</a></div>
+</div><div class="heroBadge">🌴 খেজুরের গুড়<br><small>সাতক্ষীরার ঐতিহ্যের স্বাদ</small></div></section>
 
-<!-- ===== NAV ===== -->
-<nav>
-  <div class="brand">
-    <svg width="30" height="30" viewBox="0 0 240 240"><circle cx="120" cy="120" r="112" fill="#0C120A"/><path d="M120 100 C 132 116 140 128 140 140 C 140 152 131 160 120 160 C 109 160 100 152 100 140 C 100 128 108 116 120 100 Z" fill="#FFC24B"/></svg>
-    সাতক্ষীরা হানি এন্ড ঘি
-  </div>
-  <div class="nav-links">
-    <a href="#about">আমাদের গল্প</a>
-    <a href="#products">প্রোডাক্ট</a>
-    <a href="#process">প্রক্রিয়া</a>
-    <a href="#order">যোগাযোগ</a>
-  </div>
-  <a href="#order" class="nav-cta">অর্ডার করুন</a>
-</nav>
+<section class="features"><div class="wrap featureGrid"><div class="feature"><b>🌿</b>প্রাকৃতিক ও খাঁটি</div><div class="feature"><b>🛡</b>মানের প্রতি যত্ন</div><div class="feature"><b>🚚</b>সারা দেশে ডেলিভারি</div><div class="feature"><b>🎁</b>বিশেষ অফার ও সেবা</div></div></section>
 
-<!-- ===== HERO ===== -->
-<div class="hero">
-  <div class="glow g1"></div>
-  <div class="glow g2"></div>
-  <svg class="hero-watermark" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="120" cy="120" r="112" fill="none" stroke="#FFE9AE" stroke-width="1.4"/>
-    <circle cx="120" cy="120" r="98" fill="none" stroke="#FFE9AE" stroke-width="1" stroke-dasharray="2 8"/>
-    <path d="M120 92 C136 112 146 126 146 140 C146 156 135 166 120 166 C105 166 94 156 94 140 C94 126 104 112 120 92 Z" fill="#FFE9AE"/>
-  </svg>
-  <div class="eyebrow">Since 2026 · Satkhira, Bangladesh</div>
-  <h1>খাঁটির নিশ্চয়তায়</h1>
-  <p class="tag">সাতক্ষীরার খামার থেকে সরাসরি আপনার ঘরে — ১০০% খাঁটি মধু ও ঘি, সারা বাংলাদেশে ডেলিভারি</p>
+<section class="section" id="products"><div class="wrap"><div class="title"><small>— আমাদের জনপ্রিয় পণ্য —</small><h2>প্রকৃতির খাঁটি উপহার</h2><p>মধু, ঘি ও খেজুরের গুড়ের নির্বাচিত সংগ্রহ</p></div>
+<div class="products">
+<div class="card"><div class="cardImg"><img src="honey.jpg" alt="প্রাকৃতিক মধু"></div><div class="cardBody"><span class="label">PURE HONEY</span><h3>প্রাকৃতিক মধু</h3><div class="stars">★★★★★</div><div class="price">দাম জানতে যোগাযোগ</div><div class="cardActions"><button class="details">বিস্তারিত দেখুন</button><button class="cartBtn">🛒</button></div></div></div>
+<div class="card"><div class="cardImg"><img src="ghee.jpg" alt="বিশুদ্ধ ঘি"></div><div class="cardBody"><span class="label">PREMIUM GHEE</span><h3>বিশুদ্ধ ঘি</h3><div class="stars">★★★★★</div><div class="price">৳ ১,৪০০ / কেজি</div><div class="cardActions"><button class="details">বিস্তারিত দেখুন</button><button class="cartBtn">🛒</button></div></div></div>
+<div class="card"><div class="cardImg"><img src="date-jaggery.jpg" alt="খেজুরের গুড়"></div><div class="cardBody"><span class="label">SATKHIRA SPECIAL</span><h3>খেজুরের গুড়</h3><div class="stars">★★★★★</div><div class="price">দাম জানতে যোগাযোগ</div><div class="cardActions"><button class="details">বিস্তারিত দেখুন</button><button class="cartBtn">🛒</button></div></div></div>
+</div></div></section>
 
-  <div class="hero-ctas">
-    <a href="#products" class="btn-primary">প্রোডাক্ট দেখুন</a>
-    <a href="https://www.facebook.com/share/1BpEy5DfZH/" target="_blank" class="btn-ghost">ফেসবুক পেজ ভিজিট করুন</a>
-  </div>
+<section class="section order" id="order"><div class="wrap"><div class="title"><small style="color:#f4d57d">— ORDER YOUR WAY —</small><h2 style="color:white">যেভাবে চান, সেভাবেই অর্ডার করুন</h2><p style="color:#cfe0d8">আপনার পছন্দের মাধ্যমে সরাসরি আমাদের সঙ্গে যোগাযোগ করুন</p></div><div class="orderGrid">
+<div class="orderCard"><div class="bigIcon fbIcon"><svg class="actionSvg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.32 0 2.7.24 2.7.24v2.97h-1.52c-1.5 0-1.97.94-1.97 1.9v2.25h3.35l-.54 3.49h-2.81V24C19.61 23.07 24 18.09 24 12.07z"/></svg></div><h3>Facebook Page</h3><p>আমাদের Facebook Page-এ মেসেজ করে অর্ডার ও বিস্তারিত জানতে পারবেন।</p><a class="btn facebook" href="https://www.facebook.com/share/1Bf4Q4whLD/" target="_blank"><svg class="actionSvg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.32 0 2.7.24 2.7.24v2.97h-1.52c-1.5 0-1.97.94-1.97 1.9v2.25h3.35l-.54 3.49h-2.81V24C19.61 23.07 24 18.09 24 12.07z"/></svg> Facebook-এ যান</a></div>
+<div class="orderCard"><div class="bigIcon waIcon"><svg class="actionSvg" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 2.01C8.29 2.01 2 8.3 2 16.03c0 2.47.65 4.88 1.88 7L2 30l7.18-1.84a13.96 13.96 0 006.83 1.77c7.73 0 14.02-6.29 14.02-14.02S23.75 2.01 16.02 2.01zm0 25.55a11.5 11.5 0 01-5.87-1.61l-.42-.25-4.26 1.09 1.14-4.15-.27-.43a11.51 11.51 0 01-1.77-6.18c0-6.34 5.16-11.5 11.5-11.5 6.34 0 11.5 5.16 11.5 11.5 0 6.34-5.16 11.53-11.53 11.53z"/></svg></div><h3>WhatsApp অর্ডার</h3><p>সরাসরি WhatsApp-এ মেসেজ করে দ্রুত আপনার অর্ডার দিন।</p><a class="btn whatsapp" href="https://wa.me/8801965419892" target="_blank"><svg class="actionSvg" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 2.01C8.29 2.01 2 8.3 2 16.03c0 2.47.65 4.88 1.88 7L2 30l7.18-1.84a13.96 13.96 0 006.83 1.77c7.73 0 14.02-6.29 14.02-14.02S23.75 2.01 16.02 2.01zm0 25.55a11.5 11.5 0 01-5.87-1.61l-.42-.25-4.26 1.09 1.14-4.15-.27-.43a11.51 11.51 0 01-1.77-6.18c0-6.34 5.16-11.5 11.5-11.5 6.34 0 11.5 5.16 11.5 11.5 0 6.34-5.16 11.53-11.53 11.53z"/></svg> WhatsApp করুন</a></div>
+<div class="orderCard"><div class="bigIcon callIcon"><svg class="actionSvg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.47 15.47 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><h3>সরাসরি কল করুন</h3><p>পণ্য, দাম অথবা অর্ডার সম্পর্কে কথা বলতে এখনই ফোন করুন।</p><a class="btn phone" href="tel:+8801965419892"><svg class="actionSvg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.47 15.47 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> 01965419892</a></div>
+</div></div></section>
 
-  <div class="hero-bottles">
-    <div class="bstage">
-      <div class="pad"></div>
-      <svg class="bottle-float" width="110" height="230" viewBox="0 0 120 260" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="glass1" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#3a4a3a" stop-opacity="0.35"/><stop offset="50%" stop-color="#eef5e6" stop-opacity="0.18"/><stop offset="100%" stop-color="#3a4a3a" stop-opacity="0.35"/>
-          </linearGradient>
-          <linearGradient id="honeyFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFDB7A"/><stop offset="100%" stop-color="#C77E0E"/></linearGradient>
-          <linearGradient id="capGrad1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8F6A1E"/><stop offset="50%" stop-color="#FFE9AE"/><stop offset="100%" stop-color="#8F6A1E"/></linearGradient>
-        </defs>
-        <path d="M45 20 h30 v28 c14 10 20 24 20 42 v130 a10 10 0 0 1 -10 10 h-50 a10 10 0 0 1 -10 -10 v-130 c0 -18 6 -32 20 -42 Z" fill="url(#glass1)" stroke="#FFC24B" stroke-width="1.3" stroke-opacity="0.7"/>
-        <path d="M30 118 c0 -6 4 -10 8 -10 h44 c4 0 8 4 8 10 v104 a10 10 0 0 1 -10 10 h-40 a10 10 0 0 1 -10 -10 Z" fill="url(#honeyFill)" opacity="0.95"/>
-        <ellipse cx="46" cy="128" rx="10" ry="5" fill="#FFF4CE" opacity="0.55"/>
-        <rect x="42" y="10" width="36" height="16" rx="4" fill="url(#capGrad1)" stroke="#5C4315" stroke-width="1"/>
-        <circle cx="60" cy="165" r="22" fill="#0F150E" opacity="0.55" stroke="#FFC24B" stroke-width="0.8" stroke-opacity="0.6"/>
-        <text x="60" y="169" text-anchor="middle" font-family="Tiro Bangla, serif" font-size="12" fill="#FFE9AE">মধু</text>
-      </svg>
-    </div>
-    <div class="bstage">
-      <div class="pad"></div>
-      <svg class="bottle-float b2" width="118" height="200" viewBox="0 0 130 220" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="glass2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3a4a3a" stop-opacity="0.35"/><stop offset="50%" stop-color="#eef5e6" stop-opacity="0.18"/><stop offset="100%" stop-color="#3a4a3a" stop-opacity="0.35"/></linearGradient>
-          <linearGradient id="gheeFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFEFB0"/><stop offset="100%" stop-color="#E0A932"/></linearGradient>
-          <linearGradient id="capGrad2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8F6A1E"/><stop offset="50%" stop-color="#FFE9AE"/><stop offset="100%" stop-color="#8F6A1E"/></linearGradient>
-        </defs>
-        <path d="M25 60 a40 30 0 0 1 80 0 v110 a14 14 0 0 1 -14 14 h-52 a14 14 0 0 1 -14 -14 Z" fill="url(#glass2)" stroke="#FFC24B" stroke-width="1.3" stroke-opacity="0.7"/>
-        <path d="M25 100 h80 v70 a14 14 0 0 1 -14 14 h-52 a14 14 0 0 1 -14 -14 Z" fill="url(#gheeFill)" opacity="0.96"/>
-        <ellipse cx="45" cy="108" rx="12" ry="6" fill="#FFF8DC" opacity="0.6"/>
-        <rect x="45" y="18" width="40" height="28" rx="8" fill="url(#capGrad2)" stroke="#5C4315" stroke-width="1"/>
-        <circle cx="65" cy="150" r="24" fill="#0F150E" opacity="0.5" stroke="#FFC24B" stroke-width="0.8" stroke-opacity="0.6"/>
-        <text x="65" y="155" text-anchor="middle" font-family="Tiro Bangla, serif" font-size="13" fill="#FFE9AE">ঘি</text>
-      </svg>
-    </div>
-  </div>
-</div>
-
-<!-- ===== TRUST STRIP ===== -->
-<div class="trust-strip">
-  <div class="trust-item"><span class="dot"></span> ১০০% খাঁটি ও অর্গানিক</div>
-  <div class="trust-item"><span class="dot"></span> সরাসরি সাতক্ষীরার খামার থেকে</div>
-  <div class="trust-item"><span class="dot"></span> কোনো ভেজাল বা প্রিজারভেটিভ নেই</div>
-  <div class="trust-item"><span class="dot"></span> সারা বাংলাদেশে হোম ডেলিভারি</div>
-</div>
-
-<!-- ===== ABOUT ===== -->
-<section id="about">
-  <div class="section-head reveal">
-    <div class="section-eyebrow">আমাদের গল্প</div>
-    <div class="section-title neon-text">কেন সাতক্ষীরার ঘি-মধু আলাদা</div>
-    <div class="neon-rule"></div>
-  </div>
-  <div class="about-grid reveal">
-    <div class="about-copy">
-      <p>সাতক্ষীরা জেলার মাটি, জলবায়ু আর ঐতিহ্যবাহী পালন পদ্ধতির কারণে এখানকার <b>ঘি ও মধু বহু বছর ধরে সারা দেশে অথেন্টিক হিসেবে পরিচিত</b>। আমরা সেই একই ঐতিহ্য ধরে রেখে, স্থানীয় খামারিদের কাছ থেকে সংগ্রহ করে সরাসরি আপনার কাছে পৌঁছে দিচ্ছি।</p>
-      <p>কোনো মধ্যস্বত্বভোগী নেই, কোনো মেশানো উপাদান নেই — শুধু <b>খাঁটি সাতক্ষীরার ঘি ও মধু</b>, প্রতিটি ব্যাচ যাচাই করে প্যাকেজিং করা হয়।</p>
-    </div>
-    <div class="about-art">
-      <svg width="220" height="220" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-        <defs><radialGradient id="ringGoldA" cx="50%" cy="50%" r="50%"><stop offset="80%" stop-color="#0C120A"/><stop offset="100%" stop-color="#1B2617"/></radialGradient></defs>
-        <circle cx="120" cy="120" r="112" fill="url(#ringGoldA)" stroke="#FFC24B" stroke-width="1.6"/>
-        <circle cx="120" cy="120" r="100" fill="none" stroke="#FFC24B" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="1 5"/>
-        <path id="topArcA" d="M 40 120 A 80 80 0 0 1 200 120" fill="none"/>
-        <text font-family="Tiro Bangla, serif" font-size="20" fill="#FFE9AE"><textPath href="#topArcA" startOffset="50%" text-anchor="middle">সাতক্ষীরা</textPath></text>
-        <path id="botArcA" d="M 48 150 A 80 80 0 0 0 192 150" fill="none"/>
-        <text font-family="Hind Siliguri, sans-serif" font-size="12" font-weight="600" fill="#C9B990"><textPath href="#botArcA" startOffset="50%" text-anchor="middle">হানি এন্ড ঘি</textPath></text>
-        <path d="M 70 95 C 55 100 50 115 58 128 C 68 118 74 105 70 95 Z" fill="#3E5A44"/>
-        <path d="M 170 95 C 185 100 190 115 182 128 C 172 118 166 105 170 95 Z" fill="#3E5A44"/>
-        <path d="M120 100 C 132 116 140 128 140 140 C 140 152 131 160 120 160 C 109 160 100 152 100 140 C 100 128 108 116 120 100 Z" fill="#FFC24B"/>
-        <ellipse cx="113" cy="132" rx="5" ry="8" fill="#FFF3CE" opacity="0.8"/>
-        <path d="M 100 168 Q 120 178 140 168 L 136 186 Q 120 192 104 186 Z" fill="#6E4A28"/>
-        <rect x="112" y="160" width="16" height="8" rx="2" fill="#6E4A28"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PRODUCTS ===== -->
-<section id="products">
-  <div class="section-head reveal">
-    <div class="section-eyebrow">Products</div>
-    <div class="section-title neon-text">আমাদের প্রোডাক্ট</div>
-    <div class="neon-rule"></div>
-    <div class="section-sub">দাম উদাহরণস্বরূপ — নিজের মতো বদলে নাও</div>
-  </div>
-  <div class="product-grid reveal">
-    <div class="product-card">
-      <div class="spot"></div>
-      <div class="product-photo-wrap">
-        <img class="product-photo" src="satkhira-honey.png" alt="সাতক্ষীরা খাঁটি মধু">
-      </div>
-      <div class="pname">খাঁটি মধু</div>
-      <div class="pdesc">সাতক্ষীরার প্রাকৃতিক বন থেকে সংগৃহীত খাঁটি মধু</div>
-      <div class="price-list">
-        <div class="price-row"><span>২৫০ গ্রাম</span><span class="amt">৳ XXX</span></div>
-        <div class="price-row"><span>৫০০ গ্রাম</span><span class="amt">৳ XXX</span></div>
-        <div class="price-row"><span>১ কেজি</span><span class="amt">৳ XXX</span></div>
-      </div>
-      <a href="#order" class="btn-primary order-btn">অর্ডার করুন</a>
-    </div>
-
-    <div class="product-card">
-      <div class="spot"></div>
-      <div class="product-photo-wrap">
-        <img class="product-photo" src="satkhira-ghee.png" alt="সাতক্ষীরা খাঁটি ঘি">
-      </div>
-      <div class="pname">খাঁটি ঘি</div>
-      <div class="pdesc">গাওয়া দুধ থেকে তৈরি ঐতিহ্যবাহী পদ্ধতির খাঁটি ঘি</div>
-      <div class="price-list">
-        <div class="price-row"><span>২৫০ গ্রাম</span><span class="amt">৳ XXX</span></div>
-        <div class="price-row"><span>৫০০ গ্রাম</span><span class="amt">৳ XXX</span></div>
-        <div class="price-row"><span>১ কেজি</span><span class="amt">৳ XXX</span></div>
-      </div>
-      <a href="#order" class="btn-primary order-btn">অর্ডার করুন</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROCESS ===== -->
-<section id="process">
-  <div class="section-head reveal">
-    <div class="section-eyebrow">Process</div>
-    <div class="section-title neon-text">খামার থেকে আপনার ঘরে</div>
-    <div class="neon-rule"></div>
-  </div>
-  <div class="process reveal">
-    <div class="step"><div class="num">০১</div><div class="stitle">সংগ্রহ</div><div class="sdesc">সাতক্ষীরার স্থানীয় খামারি থেকে সরাসরি সংগ্রহ</div></div>
-    <div class="step"><div class="num">০২</div><div class="stitle">যাচাই</div><div class="sdesc">প্রতিটি ব্যাচ মান যাচাই করে নেওয়া হয়</div></div>
-    <div class="step"><div class="num">০৩</div><div class="stitle">প্যাকেজিং</div><div class="sdesc">স্বাস্থ্যসম্মতভাবে বোতলজাত করা হয়</div></div>
-    <div class="step"><div class="num">০৪</div><div class="stitle">ডেলিভারি</div><div class="sdesc">সারা বাংলাদেশে পৌঁছে দেওয়া হয় দ্রুত</div></div>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials">
-  <div class="section-head reveal">
-    <div class="section-eyebrow">Reviews</div>
-    <div class="section-title neon-text">গ্রাহকরা যা বলছেন</div>
-    <div class="neon-rule"></div>
-  </div>
-  <div class="testi-row reveal">
-    <div class="testi"><div class="stars">★★★★★</div><p>ঘি-টা একদম খাঁটি, স্বাদ অনেকটা আমার দাদির হাতের ঘি-এর মতো।</p><div class="who">— একজন সন্তুষ্ট গ্রাহক</div></div>
-    <div class="testi"><div class="stars">★★★★★</div><p>মধু খুবই ভালো মানের, প্যাকেজিংও প্রিমিয়াম লেগেছে।</p><div class="who">— একজন সন্তুষ্ট গ্রাহক</div></div>
-    <div class="testi"><div class="stars">★★★★★</div><p>ঢাকায় বসেও সাতক্ষীরার আসল স্বাদ পেলাম, ডেলিভারিও দ্রুত ছিল।</p><div class="who">— একজন সন্তুষ্ট গ্রাহক</div></div>
-  </div>
-</section>
-
-<!-- ===== ORDER DASHBOARD ===== -->
-<section id="order">
-  <div class="section-head reveal">
-    <div class="section-eyebrow">Order Dashboard</div>
-    <div class="section-title neon-text">অনলাইনে অর্ডার করুন</div>
-    <div class="neon-rule"></div>
-    <div class="section-sub">ফর্মটি পূরণ করলে তোমার অর্ডারের বিবরণ হোয়াটসঅ্যাপে রেডি মেসেজ হয়ে চলে যাবে — শুধু পাঠিয়ে দিলেই অর্ডার কনফার্ম</div>
-  </div>
-
-  <div class="order-box reveal">
-    <div class="order-grid">
-      <form class="order-form" onsubmit="return false;">
-        <div class="field-row">
-          <div class="field">
-            <label>প্রোডাক্ট</label>
-            <select id="ordProduct">
-              <option>খাঁটি মধু</option>
-              <option>খাঁটি ঘি</option>
-              <option>মধু + ঘি (দুটোই)</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>পরিমাণ / সাইজ</label>
-            <select id="ordSize">
-              <option>২৫০ গ্রাম</option>
-              <option>৫০০ গ্রাম</option>
-              <option>১ কেজি</option>
-            </select>
-          </div>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label>কতটি পিস</label>
-            <input type="number" id="ordQty" min="1" value="1">
-          </div>
-          <div class="field">
-            <label>আপনার নাম</label>
-            <input type="text" id="ordName" placeholder="নাম লিখুন">
-          </div>
-        </div>
-        <div class="field">
-          <label>ফোন / হোয়াটসঅ্যাপ নম্বর</label>
-          <input type="tel" id="ordPhone" placeholder="01XXXXXXXXX">
-        </div>
-        <div class="field">
-          <label>ডেলিভারি ঠিকানা</label>
-          <textarea id="ordAddress" rows="2" placeholder="সম্পূর্ণ ঠিকানা লিখুন"></textarea>
-        </div>
-        <button type="button" id="ordSubmit" class="btn-primary full">হোয়াটসঅ্যাপে অর্ডার পাঠান</button>
-        <div class="order-note">বাটনে চাপ দিলে হোয়াটসঅ্যাপ খুলবে, তোমার অর্ডারের তথ্যসহ মেসেজ আগে থেকেই লেখা থাকবে — শুধু "Send" করলেই অর্ডার চলে যাবে।</div>
-      </form>
-
-      <div class="order-side">
-        <div class="side-title">সরাসরি যোগাযোগ</div>
-        <a href="https://wa.me/8801965419892" target="_blank" class="contact-pill wide"><span class="dot"></span> হোয়াটসঅ্যাপ: +8801965419892</a>
-        <a href="tel:+8801965419892" class="contact-pill wide"><span class="dot"></span> কল করুন: +8801965419892</a>
-        <a id="fb-link" href="https://www.facebook.com/share/1BpEy5DfZH/" target="_blank" class="contact-pill wide"><span class="dot"></span> ফেসবুক পেজ ভিজিট করুন</a>
-        <div class="contact-pill wide"><span class="dot"></span> সাতক্ষীরা, বাংলাদেশ</div>
-        <div class="owner-note">প্রোপ্রাইটর: <b>Md Sagor</b></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-<a href="https://wa.me/8801965419892" target="_blank" class="wa-float" aria-label="WhatsApp এ অর্ডার করুন">
-  <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 4C9.4 4 4 9.4 4 16c0 2.4.7 4.6 1.9 6.5L4 28l5.7-1.8C11.5 27.3 13.7 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="white"/>
-    <path d="M16 6.4c-5.3 0-9.6 4.3-9.6 9.6 0 2 .6 3.9 1.7 5.5l-1.1 4 4.1-1.3c1.5.9 3.2 1.4 4.9 1.4 5.3 0 9.6-4.3 9.6-9.6s-4.3-9.6-9.6-9.6Z" fill="#25D366"/>
-    <path d="M12.4 11c-.3-.6-.5-.6-.8-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.7 1.2 3.3 1.4 3.5.2.3 2.4 3.7 5.9 5 2.9 1.1 3.5.9 4.1.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.4-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.8-1-2.4Z" fill="white"/>
-  </svg>
-</a>
-
-<footer class="reveal">
-  <span class="fserif neon-text">সাতক্ষীরা হানি এন্ড ঘি</span>
-  খাঁটির নিশ্চয়তায় · প্রোপ্রাইটর: Md Sagor
-  <div class="foot-links">
-    <a href="#about">আমাদের গল্প</a>
-    <a href="#products">প্রোডাক্ট</a>
-    <a href="#order">অর্ডার করুন</a>
-    <a href="https://www.facebook.com/share/1BpEy5DfZH/" target="_blank">ফেসবুক পেজ</a>
-    <a href="https://wa.me/8801965419892" target="_blank">হোয়াটসঅ্যাপ</a>
-  </div>
-  <div class="note">নোট: দামের জায়গাগুলো এখনও প্লেসহোল্ডার (৳ XXX) — প্রতিটি সাইজের আসল দাম দিলে বসিয়ে দেব।</div>
-</footer>
-
-<script>
-  const els = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{ threshold:0.12 });
-  els.forEach(el=>io.observe(el));
-
-  const menuBtn = document.querySelector('.menu-btn');
-
-  // Order dashboard -> prefilled WhatsApp message
-  const ordSubmit = document.getElementById('ordSubmit');
-  if(ordSubmit){
-    ordSubmit.addEventListener('click', () => {
-      const product = document.getElementById('ordProduct').value;
-      const size = document.getElementById('ordSize').value;
-      const qty = document.getElementById('ordQty').value || '1';
-      const name = document.getElementById('ordName').value || 'জানানো হয়নি';
-      const phone = document.getElementById('ordPhone').value || 'জানানো হয়নি';
-      const address = document.getElementById('ordAddress').value || 'জানানো হয়নি';
-
-      const msg =
-`নতুন অর্ডার — সাতক্ষীরা হানি এন্ড ঘি
-প্রোডাক্ট: ${product}
-সাইজ: ${size}
-পরিমাণ: ${qty} পিস
-নাম: ${name}
-ফোন: ${phone}
-ঠিকানা: ${address}`;
-
-      const url = 'https://wa.me/8801965419892?text=' + encodeURIComponent(msg);
-      window.open(url, '_blank');
-    });
-  }
-</script>
-
-</body>
-</html>
+<footer id="contact"><div class="wrap"><div class="foot"><div><strong>SATKHIRA HONEY & GHEE</strong><p>সাতক্ষীরার স্বাদ, আপনার ঘরে।</p></div><div>📍 গাবতলী, ঢাকা<br>👤 সাগর হোসেন<br>📞 01965419892</div><div>🚚 সারা বাংলাদেশে হোম ডেলিভারি<br>💬 WhatsApp-এ অর্ডার সুবিধা</div></div><div class="copy">© 2026 SATKHIRA HONEY & GHEE — All Rights Reserved.</div></div></footer>
+<a class="floatWa" href="https://wa.me/8801965419892" target="_blank"><svg class="floatSvg" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 2.01C8.29 2.01 2 8.3 2 16.03c0 2.47.65 4.88 1.88 7L2 30l7.18-1.84a13.96 13.96 0 006.83 1.77c7.73 0 14.02-6.29 14.02-14.02S23.75 2.01 16.02 2.01zm0 25.55a11.5 11.5 0 01-5.87-1.61l-.42-.25-4.26 1.09 1.14-4.15-.27-.43a11.51 11.51 0 01-1.77-6.18c0-6.34 5.16-11.5 11.5-11.5 6.34 0 11.5 5.16 11.5 11.5 0 6.34-5.16 11.53-11.53 11.53z"/></svg></a>
+</body></html>
