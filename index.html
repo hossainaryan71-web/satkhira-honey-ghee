@@ -42,6 +42,38 @@
     50%{ filter:drop-shadow(0 0 16px rgba(255,196,75,0.85)) drop-shadow(0 0 38px rgba(255,196,75,0.45)); }
   }
 
+  /* ===== FLOATING BACKGROUND PARTICLES ===== */
+  .particles{ position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+  .particle{ position:absolute; bottom:-60px; animation-name:riseFade; animation-timing-function:linear; animation-iteration-count:infinite; }
+  @keyframes riseFade{
+    0%{ transform:translateY(0) scale(0.8) rotate(0deg); opacity:0; }
+    8%{ opacity:.5; }
+    50%{ opacity:.28; }
+    92%{ opacity:0; }
+    100%{ transform:translateY(-118vh) scale(1.15) rotate(20deg); opacity:0; }
+  }
+  .p-drop{ filter:drop-shadow(0 0 7px rgba(255,196,75,0.55)); }
+  .p-leaf{ filter:drop-shadow(0 0 6px rgba(62,90,68,0.5)); }
+  .p-spark{ filter:drop-shadow(0 0 8px rgba(255,233,174,0.7)); }
+  .p1{ left:5%; width:16px; animation-duration:19s; animation-delay:0s; }
+  .p2{ left:16%; width:10px; animation-duration:14s; animation-delay:2.5s; }
+  .p3{ left:27%; width:20px; animation-duration:23s; animation-delay:5s; }
+  .p4{ left:39%; width:9px; animation-duration:16s; animation-delay:1s; }
+  .p5{ left:51%; width:15px; animation-duration:21s; animation-delay:7s; }
+  .p6{ left:63%; width:11px; animation-duration:17s; animation-delay:3.5s; }
+  .p7{ left:75%; width:18px; animation-duration:25s; animation-delay:6s; }
+  .p8{ left:87%; width:10px; animation-duration:15s; animation-delay:4.5s; }
+  .p9{ left:94%; width:14px; animation-duration:20s; animation-delay:9s; }
+  .p10{ left:8%; width:8px; animation-duration:13s; animation-delay:10s; }
+
+  /* ===== HERO WATERMARK ===== */
+  .hero-watermark{
+    position:absolute; top:50%; left:50%; width:640px; height:640px;
+    transform:translate(-50%,-50%); opacity:0.05; z-index:1; pointer-events:none;
+    animation:watermarkSpin 70s linear infinite;
+  }
+  @keyframes watermarkSpin{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
+
   /* ===== NAV ===== */
   nav{
     position:sticky; top:0; z-index:50;
@@ -50,7 +82,7 @@
     border-bottom:1px solid rgba(255,196,75,0.14);
   }
   .brand{ display:flex; align-items:center; gap:10px; font-family:'Tiro Bangla',serif; font-size:16px; color:var(--neon-2); }
-  .brand svg{ flex-shrink:0; }
+  .brand svg{ flex-shrink:0; filter:drop-shadow(0 0 6px rgba(255,196,75,0.5)); animation:neonPulse 4s ease-in-out infinite; }
   .nav-links{ display:flex; gap:26px; font-size:14px; color:var(--cream-dim); }
   .nav-links a:hover{ color:var(--neon); }
   .nav-cta{
@@ -109,7 +141,7 @@
   .trust-item .dot{ width:6px;height:6px;border-radius:50%; background:var(--neon); box-shadow:0 0 8px var(--neon-glow); }
 
   /* ===== SECTIONS ===== */
-  section{ max-width:1120px; margin:0 auto; padding:110px 24px 0; position:relative; }
+  section{ max-width:1120px; margin:0 auto; padding:110px 24px 0; position:relative; z-index:1; }
   .section-head{ text-align:center; margin-bottom:50px; }
   .section-eyebrow{ font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--neon); font-weight:600; }
   .section-title{ font-family:'Tiro Bangla',serif; font-size:clamp(26px,4vw,38px); margin-top:10px; color:var(--cream); }
@@ -136,6 +168,17 @@
   .product-card svg{ position:relative; z-index:2; animation:bob 5s ease-in-out infinite, neonPulse 3.2s ease-in-out infinite; }
   .product-card .pname{ font-family:'Tiro Bangla',serif; font-size:22px; color:var(--neon-2); margin-top:20px; }
   .product-card .pdesc{ font-size:13px; color:var(--cream-dim); margin-top:8px; }
+  .product-photo-wrap{ position:relative; border-radius:20px; overflow:hidden; margin:0 auto; max-width:260px; }
+  .product-photo-wrap::after{
+    content:""; position:absolute; inset:0; border-radius:20px; border:1px solid rgba(255,196,75,0.4);
+    box-shadow:inset 0 0 30px rgba(255,196,75,0.08); pointer-events:none;
+  }
+  .product-photo{
+    width:100%; display:block; border-radius:20px;
+    animation:bob 5s ease-in-out infinite, neonPulse 3.2s ease-in-out infinite;
+    transition:transform .4s ease;
+  }
+  .product-card:hover .product-photo{ transform:scale(1.03); }
   .price-list{ margin-top:20px; display:flex; flex-direction:column; gap:8px; }
   .price-row{ display:flex; justify-content:space-between; font-size:14px; padding:10px 16px; background:rgba(255,196,75,0.06); border-radius:10px; border:1px solid rgba(255,196,75,0.1); }
   .price-row .amt{ color:var(--neon); font-weight:600; }
@@ -144,16 +187,18 @@
   /* ===== PROCESS ===== */
   .process{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
   @media(max-width:800px){ .process{ grid-template-columns:1fr 1fr; } }
-  .step{ background:var(--forest-2); border-radius:18px; padding:26px 20px; border:1px solid rgba(255,196,75,0.12); text-align:center; }
-  .step .num{ font-family:'Tiro Bangla',serif; font-size:26px; color:var(--neon); }
+  .step{ background:var(--forest-2); border-radius:18px; padding:26px 20px; border:1px solid rgba(255,196,75,0.12); text-align:center; transition:transform .35s ease, box-shadow .35s ease; }
+  .step:hover{ transform:translateY(-6px); box-shadow:0 0 22px rgba(255,196,75,0.2); }
+  .step .num{ font-family:'Tiro Bangla',serif; font-size:26px; color:var(--neon); text-shadow:0 0 10px rgba(255,196,75,0.5); }
   .step .stitle{ font-size:14px; font-weight:600; color:var(--cream); margin-top:10px; }
   .step .sdesc{ font-size:12px; color:var(--cream-dim); margin-top:6px; line-height:1.6; }
 
   /* ===== TESTIMONIAL ===== */
   .testi-row{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; }
   @media(max-width:800px){ .testi-row{ grid-template-columns:1fr; } }
-  .testi{ background:var(--forest-2); border-radius:18px; padding:26px; border:1px solid rgba(255,196,75,0.12); }
-  .testi .stars{ color:var(--neon); font-size:14px; letter-spacing:2px; }
+  .testi{ background:var(--forest-2); border-radius:18px; padding:26px; border:1px solid rgba(255,196,75,0.12); transition:transform .35s ease, box-shadow .35s ease; }
+  .testi:hover{ transform:translateY(-6px); box-shadow:0 0 22px rgba(255,196,75,0.18); }
+  .testi .stars{ color:var(--neon); font-size:14px; letter-spacing:2px; text-shadow:0 0 8px rgba(255,196,75,0.6); }
   .testi p{ font-size:13.5px; color:var(--cream-dim); margin-top:12px; line-height:1.8; }
   .testi .who{ margin-top:14px; font-size:13px; color:var(--neon-2); }
 
@@ -216,6 +261,20 @@
 </head>
 <body>
 
+<!-- ===== FLOATING BACKGROUND PARTICLES ===== -->
+<div class="particles" aria-hidden="true">
+  <svg class="particle p-drop p1" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#FFC24B"/></svg>
+  <svg class="particle p-leaf p2" viewBox="0 0 24 24"><path d="M4 12 C4 6 9 3 20 3 C20 14 16 20 4 12 Z" fill="#3E5A44"/></svg>
+  <svg class="particle p-spark p3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#FFE9AE"/></svg>
+  <svg class="particle p-drop p4" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#D98F1C"/></svg>
+  <svg class="particle p-leaf p5" viewBox="0 0 24 24"><path d="M4 12 C4 6 9 3 20 3 C20 14 16 20 4 12 Z" fill="#3E5A44"/></svg>
+  <svg class="particle p-spark p6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#FFC24B"/></svg>
+  <svg class="particle p-drop p7" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#FFC24B"/></svg>
+  <svg class="particle p-leaf p8" viewBox="0 0 24 24"><path d="M4 12 C4 6 9 3 20 3 C20 14 16 20 4 12 Z" fill="#3E5A44"/></svg>
+  <svg class="particle p-spark p9" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#FFE9AE"/></svg>
+  <svg class="particle p-drop p10" viewBox="0 0 24 24"><path d="M12 2 C16 8 19 12 19 15.5 C19 19 15.9 21 12 21 C8.1 21 5 19 5 15.5 C5 12 8 8 12 2 Z" fill="#D98F1C"/></svg>
+</div>
+
 <!-- ===== NAV ===== -->
 <nav>
   <div class="brand">
@@ -235,6 +294,11 @@
 <div class="hero">
   <div class="glow g1"></div>
   <div class="glow g2"></div>
+  <svg class="hero-watermark" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="120" cy="120" r="112" fill="none" stroke="#FFE9AE" stroke-width="1.4"/>
+    <circle cx="120" cy="120" r="98" fill="none" stroke="#FFE9AE" stroke-width="1" stroke-dasharray="2 8"/>
+    <path d="M120 92 C136 112 146 126 146 140 C146 156 135 166 120 166 C105 166 94 156 94 140 C94 126 104 112 120 92 Z" fill="#FFE9AE"/>
+  </svg>
   <div class="eyebrow">Since 2026 · Satkhira, Bangladesh</div>
   <h1>খাঁটির নিশ্চয়তায়</h1>
   <p class="tag">সাতক্ষীরার খামার থেকে সরাসরি আপনার ঘরে — ১০০% খাঁটি মধু ও ঘি, সারা বাংলাদেশে ডেলিভারি</p>
@@ -333,23 +397,9 @@
   <div class="product-grid reveal">
     <div class="product-card">
       <div class="spot"></div>
-      <svg width="120" height="250" viewBox="0 0 150 320" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="glassA" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3a4a3a" stop-opacity="0.4"/><stop offset="45%" stop-color="#f4f9ee" stop-opacity="0.22"/><stop offset="55%" stop-color="#f4f9ee" stop-opacity="0.22"/><stop offset="100%" stop-color="#3a4a3a" stop-opacity="0.4"/></linearGradient>
-          <linearGradient id="honeyA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFDD7E"/><stop offset="100%" stop-color="#B4740D"/></linearGradient>
-          <linearGradient id="capA" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7C5A18"/><stop offset="45%" stop-color="#FFE9AE"/><stop offset="55%" stop-color="#FFE9AE"/><stop offset="100%" stop-color="#7C5A18"/></linearGradient>
-        </defs>
-        <ellipse cx="75" cy="300" rx="42" ry="10" fill="#000" opacity="0.35"/>
-        <path d="M56 26 h38 v34 c18 12 26 30 26 52 v160 a13 13 0 0 1 -13 13 h-64 a13 13 0 0 1 -13 -13 v-160 c0 -22 8 -40 26 -52 Z" fill="url(#glassA)" stroke="#FFC24B" stroke-width="1.5" stroke-opacity="0.75"/>
-        <path d="M40 150 c0 -8 5 -13 10 -13 h50 c5 0 10 5 10 13 v122 a13 13 0 0 1 -13 13 h-44 a13 13 0 0 1 -13 -13 Z" fill="url(#honeyA)"/>
-        <path d="M40 150 q35 -10 70 0" fill="none" stroke="#FFF3CE" stroke-width="2" opacity="0.55"/>
-        <ellipse cx="58" cy="168" rx="12" ry="7" fill="#FFF6D8" opacity="0.6"/>
-        <rect x="52" y="12" width="46" height="20" rx="5" fill="url(#capA)" stroke="#5C4315" stroke-width="1"/>
-        <circle cx="75" cy="205" r="30" fill="#0C120A" opacity="0.6" stroke="#FFC24B" stroke-width="1" stroke-opacity="0.65"/>
-        <text x="75" y="200" text-anchor="middle" font-family="Tiro Bangla, serif" font-size="13" fill="#FFE9AE">সাতক্ষীরা</text>
-        <text x="75" y="216" text-anchor="middle" font-family="Hind Siliguri" font-size="10" fill="#FFC24B">খাঁটি মধু</text>
-        <rect x="43" y="130" width="64" height="10" fill="#FFC24B" opacity="0.9"/>
-      </svg>
+      <div class="product-photo-wrap">
+        <img class="product-photo" src="satkhira-honey.png" alt="সাতক্ষীরা খাঁটি মধু">
+      </div>
       <div class="pname">খাঁটি মধু</div>
       <div class="pdesc">সাতক্ষীরার প্রাকৃতিক বন থেকে সংগৃহীত খাঁটি মধু</div>
       <div class="price-list">
@@ -362,23 +412,9 @@
 
     <div class="product-card">
       <div class="spot"></div>
-      <svg width="130" height="230" viewBox="0 0 160 290" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="glassB" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3a4a3a" stop-opacity="0.4"/><stop offset="45%" stop-color="#f4f9ee" stop-opacity="0.22"/><stop offset="55%" stop-color="#f4f9ee" stop-opacity="0.22"/><stop offset="100%" stop-color="#3a4a3a" stop-opacity="0.4"/></linearGradient>
-          <linearGradient id="gheeB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF0B4"/><stop offset="100%" stop-color="#D4A02A"/></linearGradient>
-          <linearGradient id="capB" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7C5A18"/><stop offset="45%" stop-color="#FFE9AE"/><stop offset="55%" stop-color="#FFE9AE"/><stop offset="100%" stop-color="#7C5A18"/></linearGradient>
-        </defs>
-        <ellipse cx="80" cy="272" rx="52" ry="11" fill="#000" opacity="0.35"/>
-        <path d="M30 78 a50 40 0 0 1 100 0 v150 a18 18 0 0 1 -18 18 h-64 a18 18 0 0 1 -18 -18 Z" fill="url(#glassB)" stroke="#FFC24B" stroke-width="1.5" stroke-opacity="0.75"/>
-        <path d="M30 130 h100 v98 a18 18 0 0 1 -18 18 h-64 a18 18 0 0 1 -18 -18 Z" fill="url(#gheeB)"/>
-        <path d="M30 130 q50 -12 100 0" fill="none" stroke="#FFF8E2" stroke-width="2" opacity="0.55"/>
-        <ellipse cx="52" cy="145" rx="14" ry="7" fill="#FFFAE8" opacity="0.6"/>
-        <rect x="55" y="22" width="50" height="34" rx="10" fill="url(#capB)" stroke="#5C4315" stroke-width="1"/>
-        <circle cx="80" cy="190" r="34" fill="#0C120A" opacity="0.55" stroke="#FFC24B" stroke-width="1" stroke-opacity="0.65"/>
-        <text x="80" y="185" text-anchor="middle" font-family="Tiro Bangla, serif" font-size="14" fill="#FFE9AE">সাতক্ষীরা</text>
-        <text x="80" y="202" text-anchor="middle" font-family="Hind Siliguri" font-size="10" fill="#FFC24B">খাঁটি ঘি</text>
-        <rect x="33" y="112" width="94" height="10" fill="#FFC24B" opacity="0.9"/>
-      </svg>
+      <div class="product-photo-wrap">
+        <img class="product-photo" src="satkhira-ghee.png" alt="সাতক্ষীরা খাঁটি ঘি">
+      </div>
       <div class="pname">খাঁটি ঘি</div>
       <div class="pdesc">গাওয়া দুধ থেকে তৈরি ঐতিহ্যবাহী পদ্ধতির খাঁটি ঘি</div>
       <div class="price-list">
